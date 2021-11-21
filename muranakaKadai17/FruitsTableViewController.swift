@@ -35,7 +35,10 @@ class FruitsTableViewController: UITableViewController {
     }
     // MARK: - 課題１７で追記。　その他、変更点なし。
     // 下記のWarningは、インデントを整えると、解決できますが、「editingStyle」　ということが、理解できれば良いと、感じたので、そのままにしています。
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView,
+                            commit editingStyle: UITableViewCell.EditingStyle,
+                            forRowAt indexPath: IndexPath) {
+            
         if editingStyle == .delete {
             fruits.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
